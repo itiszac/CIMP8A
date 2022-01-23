@@ -17,10 +17,12 @@ def print_results(starting_money, bet):
 def main():
     print_header()
 
-    starting_money = int(input("Starting money:\t"))
-    bet = int(input("Bet amount:\t"))
+    starting_money = float(input("Starting money:\t"))
+    bet = float(input("Bet amount:\t"))
 
     print_results(starting_money, bet)
+
+    print("\nBye!")
 
 
 if __name__ == "__main__":
