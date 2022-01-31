@@ -7,11 +7,11 @@ def print_header():
 
 
 def print_results(starting_money, bet):
-  print("\nENDING MONEY FOR A...")
-  print(f"Blackjack:\t{starting_money + (bet * 1.5):.2f}")
-  print(f"Win:\t\t{starting_money + bet:.2f}")
-  print(f"Push:\t\t{starting_money:.2f}")
-  print(f"Lose:\t\t{starting_money - bet:.2f}")
+    print("\nENDING MONEY FOR A...")
+    print(f"Blackjack:\t{starting_money + (bet * 1.5):.2f}")
+    print(f"Win:\t\t{starting_money + bet:.2f}")
+    print(f"Push:\t\t{starting_money:.2f}")
+    print(f"Lose:\t\t{starting_money - bet:.2f}")
 
 
 def main():
