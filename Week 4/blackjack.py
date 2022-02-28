@@ -42,22 +42,54 @@ def print_results(money):
     print(f"Money: {money:.2f}")
 
 
+def get_starting_money():
+    money = 0.0
+    while True:
+        try:
+            money = float(input("Starting money:\t"))
+            if 5 <= money <= 10000:
+                break
+            print("Invalid amount. Must be between 5 and 10,000. Please try again.")
+        except Exception as e:
+            print(e)
+    return money
+
+
+def get_bet(money):
+    bet = 0
+    print()
+    while True:
+        try:
+            bet = input("Bet Amounts: ")
+            if bet == "x":
+                break
+            bet = float(bet)
+            if bet < 5:
+                print("The minimum bet is 5. Please try again.")
+            elif bet > 1000:
+                print("The maximum bet is 1000. Please try again.")
+            elif bet > money:
+                print("You don't have enough to cover that bet. Please try again.")
+            else:
+                break
+        except Exception as e:
+            print(e)
+    return bet
+
+
 def main():
     print_header()
 
-    starting_money = float(input("Starting money:\t"))
+    money = get_starting_money()
+
     bet = 0
     while bet != "x":
-        bet = input("\nBet amount: ")
+        bet = get_bet(money)
         if bet == "x":
             break
-
-        bet = float(bet)
         bet_result = get_results()
-        starting_money = calculate_money(
-            money=starting_money, bet=bet, result=bet_result
-        )
-        print_results(money=starting_money)
+        money = calculate_money(money=money, bet=bet, result=bet_result)
+        print_results(money=money)
 
     print("Bye!")
 
