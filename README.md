@@ -1,4 +1,6 @@
-# CIMP8A
+# CIMP8A Saddleback College
 
-This repo is broken into folders which represent each weeks assignments and code labs.
+Homework questions and the respective solutions
+
+All code was written and submitted for CIMP8A Spring 2022 at Saddleback College
 
