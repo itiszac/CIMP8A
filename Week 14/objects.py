@@ -32,3 +32,22 @@ class Meal:
 
     def set_meal_thumb(self, meal_thumb):
         self.__meal_thumb = meal_thumb
+
+
+class Recipe(Meal):
+    def __init__(self, meal_id, meal_name, meal_thumb):
+        super().__init__(meal_id, meal_name, meal_thumb)
+        self.__meal_ingredients = []
+        self.__meal_instructions = []
+
+    def get_meal_ingredients(self):
+        return self.__meal_ingredients
+
+    def set_meal_ingredients(self, meal_ingredients):
+        self.__meal_ingredients = meal_ingredients
+
+    def get_meal_instructions(self):
+        return self.__meal_instructions
+
+    def set_meal_instructions(self, meal_instructions):
+        self.__meal_instructions = meal_instructions
